@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+/* ====================================================
+   === Global Base Styles ===
+==================================================== */
+body {
+  background-color: #f8f8f8;
+  color: #202020;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #f8f8f8,
+    #f8f8f8 49px,
+    #ffffff 50px
+  );
+  background-size: 100% 50px;
+}
+
+/* ====================================================
+   === Typography ===
+==================================================== */
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Teko', sans-serif;
+  color: #006400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #A4D23B;
+  padding-bottom: 0.2em;
+  margin-top: 1em;
+}
+
+/* Links */
+a {
+  color: #3B9C3F;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #A4D23B;
+  text-decoration: underline dotted;
+}
+
+/* ====================================================
+   === Navigation Bar ===
+==================================================== */
+.navbar {
+  background: linear-gradient(90deg, #006400 0%, #3B9C3F 100%);
+  border-bottom: 10px solid #A4D23B;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #A4D23B !important;
+  font-family: 'Teko', sans-serif;
+}
+
+.navbar-brand span {
+  position: relative;
+  top: 2px;
+}
+
+.navbar-logo {
+  max-width: 33px;
+  max-height: 33px;
+  height: auto;
+  width: auto;
+  margin-right: 0.2em;
+  vertical-align: middle;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #A4D23B !important;
+}
+
+.navbar .fab.fa-github {
+  transition: transform 0.3s ease;
+}
+
+.navbar .fab.fa-github:hover {
+  transform: scale(1.1);
+}
+
+.navbar .fas.fa-book {
+  transition: transform 0.3s ease;
+}
+
+.navbar .fas.fa-book:hover {
+  transform: scale(1.1);
+}
+
+/* ====================================================
+   === Dropdown Menu ===
+==================================================== */
+.dropdown-menu {
+  background-color: #e6ffe6;
+  border: 1px solid #3B9C3F;
+}
+
+/* ====================================================
+   === Article Content ===
+==================================================== */
+article {
+  background-color: #ffffff;
+  border: 3px dashed #006400;
+  border-left: 6px solid #A4D23B;
+  padding: 1.5em;
+  margin: 2em 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.date-and-tags,
+.authors {
+  color: #000000;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* ====================================================
+   === Footer ===
+==================================================== */
+footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #e0ffe0;
+  color: #006400;
+  border-top: 4px double #3B9C3F;
+  padding: 2em;
+  text-align: center;
+}
+
+footer a {
+  color: #3B9C3F;
+}
+
+footer a:hover {
+  color: #A4D23B;
+}
+
+.post-footer {
+  background-color: #f0fff0;
+  border-top: 2px dashed #b5e7b5;
+  padding: 1em;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #3B9C3F;
+  margin-top: 2em;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 100, 0, 0.05);
+}
+
+.post-footer a {
+  color: #3B9C3F;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.post-footer a:hover {
+  color: #A4D23B;
+  text-decoration: underline dotted;
+}
+
+/* ====================================================
+   === Code Styling ===
+==================================================== */
+
+/* Code Blocks */
+pre {
+  background-color: #f8fff8;
+  color: #202020;
+  border-left: 5px solid #3B9C3F;
+  padding: 0.5em;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+/* Inline Code */
+code {
+  background-color: #eaffea; /* light green */
+  color: #202020;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.95em;
+  font-family: monospace;
+}
+
+/* Prevent double styling inside pre blocks */
+pre code {
+  background-color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+/* ====================================================
+   === Spoiler Effect ===
+==================================================== */
+.spoiler {
+  background-color: #888;
+  color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  border-radius: 3px;
+  padding: 0 2px;
+  display: inline-block;
+  width: 3ch;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  top: 7px;
+}
+
+.spoiler:hover {
+  background-color: #999;
+}
+
+.spoiler.revealed {
+  background-color: transparent;
+  color: inherit;
+  cursor: default;
+  width: auto;
+  position: relative;
+  top: 5px;
+}
